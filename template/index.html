@@ -3,10 +3,10 @@
 {% block content %}
 
 <div style="padding-left:50px; padding-top:50px" >
-<button class="btn btn-dark" onclick="show_active_nodes" id="show_active_nodes">Show Active Nodes</button>
+<button class="btn btn-dark" id="show_active_nodes">Show Inactive Nodes</button>
 </div>
 <div id = "active_nodes" style="visibility: hidden;padding-left:50px">
-    <h1>List of Active nodes</h1>
+    <h1>List of Inactive nodes</h1>
 <ol>
     {% for i in response %}
         {% if i.nodeStatus %}
@@ -15,7 +15,7 @@
         {% endif %}
     {% endfor %}
 </ol>
-   <button class="btn btn-dark" onclick="hide_active_nodes" id="hide_active_nodes">Hide Active Nodes</button>
+   <button class="btn btn-dark" id="hide_active_nodes">Hide Inactive Nodes</button>
 </div>
 <script>
     document.getElementById("show_active_nodes").addEventListener("click", () => {
